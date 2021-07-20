@@ -1,3 +1,5 @@
+https://awartanian.github.io/pokemon-game/
+
 # Pokemon Lite
 
 Try to make a simplified version of pokemon!
