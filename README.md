@@ -11,6 +11,6 @@ Group project of 3 - a fun pokemon battle game where you attack opponents, buy s
 Completed: April 2021 - done without any DOM manipulation training/knowledge.
 Rendering the project on the browser was not art of the assignment, hence the code might be a bit rusty.  
 
-Contributors: 
+Other contributors: 
 - Ratko (https://github.com/Ratko-Sim);
 - Heydar (https://github.com/Heman-Development);
