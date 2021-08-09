@@ -7,6 +7,10 @@
 
 Group project of 3 - a fun pokemon battle game where you attack opponents, buy stardust and hear some cool sound effects.
 
+Contributors: 
+- Ratko (https://github.com/Ratko-Sim);
+- Heydar (https://github.com/Heman-Development);
+
 ///// ATTENTION /////
 Completed: April 2021 - done without any DOM manipulation training/knowledge.
 
