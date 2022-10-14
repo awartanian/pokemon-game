@@ -211,7 +211,7 @@ main {
   color: black;
 }
 
-label {
+.body__skills span {
   text-align: center;
   font-size: 0.73rem;
   text-transform: capitalize;

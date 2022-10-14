@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <script src="./index.js" defer></script>
     <title>Pokemon</title>
   </head>
 
@@ -24,8 +22,7 @@
               <span class="bagOfCoins">💰</span>
               <span id="pikachuShowCoins"></span>
             </div>
-            <button onclick="pikachuGetMagic()" id="getMagic"></button>
-
+            <button onclick="getMagic(pikachu)" id="getMagic"></button>
             <div class="header__img-box">
               <img src="./images/pikachu1.png" alt="pikachu" />
             </div>
@@ -33,69 +30,39 @@
           <div class="card__body">
             <div class="body__wrap">
               <div class="card__health">
-                <span class="body__text health"
-                  ><img class="healthIcon" src="./images/health.png"
-                /></span>
+                <span class="body__text health"><img class="healthIcon" src="./images/health.png" /></span>
                 <div id="healthUpdatePikachu" class="body__num"></div>
               </div>
               <div class="card__magic">
-                <span class="body__text"
-                  ><img class="healthIcon" src="./images/magic.png"
-                /></span>
+                <span class="body__text"><img class="healthIcon" src="./images/magic.png" /></span>
                 <div id="magicUpdatePikachu" class="body__num"></div>
               </div>
             </div>
             <div class="body__skills">
-              <label>bulbasaur</label>
-              <label>charmander</label>
-              <label>mewtwo</label>
-              <button
-                onclick="pikachu1stAttacktoBulbasaur()"
-                class="skills__btn fist-pikachu"
-              ></button>
-
-              <button
-                onclick="pikachu4thAttacktoCharmander()"
-                class="skills__btn fist-pikachu"
-              ></button>
-
-              <button
-                onclick="pikachu7thAttacktoMewtwo()"
-                class="skills__btn fist-pikachu"
-              ></button>
-
-              <button
-                onclick="pikachu2ndAttacktoBulbasaur()"
-                class="skills__btn thunder-shock"
-              ></button>
-
-              <button
-                onclick="pikachu5thAttacktoCharmander()"
-                class="skills__btn thunder-shock"
-              ></button>
-
-              <button
-                onclick="pikachu8thAttacktoMewtwo()"
-                class="skills__btn thunder-shock"
-              ></button>
-
-              <button
-                onclick="pikachu3rdAttacktoBulbasaur()"
-                class="skills__btn thunder-wave"
-              ></button>
-
-              <button
-                onclick="pikachu6thAttacktoCharmander()"
-                class="skills__btn thunder-wave"
-              ></button>
-
-              <button
-                onclick="pikachu9thAttacktoMewtwo()"
-                class="skills__btn thunder-wave"
-              ></button>
+              <span>bulbasaur</span>
+              <span>charmander</span>
+              <span>mewtwo</span>
+              <button onclick="attackFunction(pikachu, 0, bulbasaur, fistSound)"
+                class="skills__btn fist-pikachu"></button>
+              <button onclick="attackFunction(pikachu, 0, charmander, fistSound)"
+                class="skills__btn fist-pikachu"></button>
+              <button onclick="attackFunction(pikachu, 0, mewtwo, fistSound)" class="skills__btn fist-pikachu"></button>
+              <button onclick="attackFunction(pikachu,1, bulbasaur, thunderShockSound)"
+                class="skills__btn thunder-shock"></button>
+              <button onclick="attackFunction(pikachu, 1, charmander, thunderShockSound)"
+                class="skills__btn thunder-shock"></button>
+              <button onclick="attackFunction(pikachu, 1, mewtwo, thunderShockSound)"
+                class="skills__btn thunder-shock"></button>
+              <button onclick="attackFunction(pikachu,2, bulbasaur, thunderWaveSound)"
+                class="skills__btn thunder-wave"></button>
+              <button onclick="attackFunction(pikachu, 2, charmander, thunderWaveSound)"
+                class="skills__btn thunder-wave"></button>
+              <button onclick="attackFunction(pikachu, 2, mewtwo, thunderWaveSound)"
+                class="skills__btn thunder-wave"></button>
             </div>
           </div>
         </div>
+
         <div class="rules">game rules</div>
         <div class="hidden">
           <ul>
@@ -107,11 +74,8 @@
               <strong>50</strong> stardust.
             </li>
             <li>
-              By attacking other player you will earn coins (<strong
-                >20 per attack</strong
-              >) which you will be able to exchange for stardust (<strong
-                >20 coins = 20 stardust</strong
-              >)!
+              By attacking other player you will earn coins (<strong>20 per attack</strong>) which you will be able to
+              exchange for stardust (<strong>20 coins = 20 stardust</strong>)!
             </li>
             <li>
               You are allowed to recharge your stardust
@@ -128,8 +92,7 @@
               <span class="bagOfCoins">💰</span>
               <span id="bulbasaurShowCoins"></span>
             </div>
-            <button onclick="bulbasaurGetMagic()" id="getMagic"></button>
-
+            <button onclick="getMagic(bulbasaur)" id="getMagic"></button>
             <div class="header__img-box">
               <img src="./images/bulbasaur.png" alt="bulbasaur" />
             </div>
@@ -138,57 +101,36 @@
             <div class="body__wrap">
               <div class="card__health">
                 <span class="body__text health">
-                  <img class="healthIcon" src="./images/health.png"
-                /></span>
+                  <img class="healthIcon" src="./images/health.png" /></span>
                 <div id="healthUpdateBulbasaur" class="body__num"></div>
               </div>
               <div class="card__magic">
-                <span class="body__text"
-                  ><img class="healthIcon" src="./images/magic.png"
-                /></span>
+                <span class="body__text"><img class="healthIcon" src="./images/magic.png" /></span>
                 <div id="magicUpdateBulbasaur" class="body__num"></div>
               </div>
             </div>
             <div class="body__skills">
-              <label>pikachu</label>
-              <label>charmander</label>
-              <label>mewtwo</label>
-              <button
-                onclick="bulbasaur1stAttacktoPikachu()"
-                class="skills__btn fist-bulbasaur"
-              ></button>
-              <button
-                onclick="bulbasaur4thAttacktoCharmander()"
-                class="skills__btn fist-bulbasaur"
-              ></button>
-              <button
-                onclick="bulbasaur7thAttacktoMewtwo()"
-                class="skills__btn fist-bulbasaur"
-              ></button>
-              <button
-                onclick="bulbasaur2ndAttacktoPikachu()"
-                class="skills__btn leech-seed"
-              ></button>
-              <button
-                onclick="bulbasaur5thAttacktoCharmander()"
-                class="skills__btn leech-seed"
-              ></button>
-              <button
-                onclick="bulbasaur8thAttacktoMewtwo()"
-                class="skills__btn leech-seed"
-              ></button>
-              <button
-                onclick="bulbasaur3rdAttacktoPikachu()"
-                class="skills__btn razor-leaf"
-              ></button>
-              <button
-                onclick="bulbasaur6thAttacktoCharmander()"
-                class="skills__btn razor-leaf"
-              ></button>
-              <button
-                onclick="bulbasaur9thAttacktoMewtwo()"
-                class="skills__btn razor-leaf"
-              ></button>
+              <span>pikachu</span>
+              <span>charmander</span>
+              <span>mewtwo</span>
+              <button onclick="attackFunction(bulbasaur, 0, pikachu, fistSound)"
+                class="skills__btn fist-bulbasaur"></button>
+              <button onclick="attackFunction(bulbasaur, 0, charmander, fistSound)"
+                class="skills__btn fist-bulbasaur"></button>
+              <button onclick="attackFunction(bulbasaur, 0, mewtwo, fistSound)"
+                class="skills__btn fist-bulbasaur"></button>
+              <button onclick="attackFunction(bulbasaur, 1, pikachu, leechSeedSound)"
+                class="skills__btn leech-seed"></button>
+              <button onclick="attackFunction(bulbasaur, 1, charmander, leechSeedSound)"
+                class="skills__btn leech-seed"></button>
+              <button onclick="attackFunction(bulbasaur, 1, mewtwo, leechSeedSound)"
+                class="skills__btn leech-seed"></button>
+              <button onclick="attackFunction(bulbasaur, 2, pikachu, razorLeafSound)"
+                class="skills__btn razor-leaf"></button>
+              <button onclick="attackFunction(bulbasaur, 2, charmander, razorLeafSound)"
+                class="skills__btn razor-leaf"></button>
+              <button onclick="attackFunction(bulbasaur, 2, mewtwo, razorLeafSound)"
+                class="skills__btn razor-leaf"></button>
             </div>
           </div>
         </div>
@@ -202,8 +144,7 @@
               <span class="bagOfCoins">💰</span>
               <span id="charmanderShowCoins"></span>
             </div>
-            <button onclick="charmanderGetMagic()" id="getMagic"></button>
-
+            <button onclick="getMagic(charmander)" id="getMagic"></button>
             <div class="header__img-box">
               <img src="./images/charmander1.png" alt="charmander" />
             </div>
@@ -211,64 +152,38 @@
           <div class="card__body">
             <div class="body__wrap">
               <div class="card__health">
-                <span class="body__text health"
-                  ><img class="healthIcon" src="./images/health.png"
-                /></span>
+                <span class="body__text health"><img class="healthIcon" src="./images/health.png" /></span>
                 <div id="healthUpdateCharmander" class="body__num"></div>
               </div>
               <div class="card__magic">
-                <span class="body__text"
-                  ><img class="healthIcon" src="./images/magic.png"
-                /></span>
+                <span class="body__text"><img class="healthIcon" src="./images/magic.png" /></span>
                 <div id="magicUpdateCharmander" class="body__num"></div>
               </div>
             </div>
             <div class="body__skills">
-              <label>pikachu</label>
-              <label>bulbasaur</label>
-              <label>mewtwo</label>
-              <button
-                onclick="charmander1stAttacktoPikachu()"
-                class="skills__btn fist-charmander"
-              ></button>
-
-              <button
-                onclick="charmander4thAttacktoBulbasaur()"
-                class="skills__btn fist-charmander"
-              ></button>
-
-              <button
-                onclick="charmander7thAttacktoMewtwo()"
-                class="skills__btn fist-charmander"
-              ></button>
-
-              <button
-                onclick="charmander2ndAttacktoPikachu()"
+              <span>pikachu</span>
+              <span>bulbasaur</span>
+              <span>mewtwo</span>
+              <button onclick="attackFunction(charmander, 0, pikachu, fistSound)"
+                class="skills__btn fist-charmander"></button>
+              <button onclick="attackFunction(charmander, 0, bulbasaur, fistSound)"
+                class="skills__btn fist-charmander"></button>
+              <button onclick="attackFunction(charmander,0, mewtwo, fistSound)"
+                class="skills__btn fist-charmander"></button>
+              <button onclick="attackFunction(charmander,1, pikachu, dragonBreathSound)"
                 class="skills__btn dragon-breath"></button>
-
-              <button
-                onclick="charmander5thAttacktoBulbasaur()"
+              <button onclick="attackFunction(charmander,1,bulbasaur, dragonBreathSound)"
                 class="skills__btn dragon-breath"></button>
-
-              <button
-                onclick="charmander8thAttacktoMewtwo()"
+              <button onclick="attackFunction(charmander,1,mewtwo, dragonBreathSound)"
                 class="skills__btn dragon-breath"></button>
-
-              <button
-                onclick="charmander3rdAttacktoPikachu()"
+              <button onclick="attackFunction(charmander,2, pikachu, infernoSound)" class="skills__btn inferno"></button>
+              <button onclick="attackFunction(charmander,2, bulbasaur, infernoSound)"
                 class="skills__btn inferno"></button>
-                
-              <button
-                onclick="charmander6thAttacktoBulbasaur()"
-                class="skills__btn inferno"></button>
-                
-              <button
-                onclick="charmander9thAttacktoMewtwo()"
-                class="skills__btn inferno"></button>
-                
+              <button onclick="attackFunction(charmander,2,mewtwo, infernoSound)" class="skills__btn inferno"></button>
             </div>
           </div>
         </div>
+
         <div id="display-Message"></div>
         <div class="card card-4">
           <div class="card__header">
@@ -277,8 +192,7 @@
               <span class="bagOfCoins">💰</span>
               <span id="mewtwoShowCoins"></span>
             </div>
-            <button onclick="mewtwoGetMagic()" id="getMagic"></button>
-
+            <button onclick="getMagic(mewtwo)" id="getMagic"></button>
             <div class="header__img-box">
               <img src="./images/mewtwo1.png" alt="bulbasaur" />
             </div>
@@ -286,66 +200,38 @@
           <div class="card__body">
             <div class="body__wrap">
               <div class="card__health">
-                <span class="body__text health"
-                  ><img class="healthIcon" src="./images/health.png"
-                /></span>
+                <span class="body__text health"><img class="healthIcon" src="./images/health.png" /></span>
                 <div id="healthUpdateMewtwo" class="body__num"></div>
               </div>
               <div class="card__magic">
-                <span class="body__text"
-                  ><img class="healthIcon" src="./images/magic.png"
-                /></span>
+                <span class="body__text"><img class="healthIcon" src="./images/magic.png" /></span>
                 <div id="magicUpdateMewtwo" class="body__num"></div>
               </div>
             </div>
             <div class="body__skills">
-              <label>pikachu</label>
-              <label>bulbasaur</label>
-              <label>charmander</label>
-              <button
-                onclick="mewtwo1stAttacktoPikachu()"
-                class="skills__btn fist-mewtwo"
-              ></button>
-              <button
-                onclick="mewtwo4thAttacktoBulbasaur()"
-                class="skills__btn fist-mewtwo"
-              ></button>
-              <button
-                onclick="mewtwo7thAttacktoCharmander()"
-                class="skills__btn fist-mewtwo"
-              ></button>
-              <button
-                onclick="mewtwo2ndAttacktoPikachu()"
-                class="skills__btn shadow-ball"
-              ></button>
-              <button
-                onclick="mewtwo5thAttacktoBulbasaur()"
-                class="skills__btn shadow-ball"
-              ></button>
-              <button
-                onclick="mewtwo8thAttacktoCharmander()"
-                class="skills__btn shadow-ball"
-              ></button>
-              <button
-                onclick="mewtwo3rdAttacktoPikachu()"
-                class="skills__btn psychic"
-              ></button>
-              <button
-                onclick="mewtwo6thAttacktoBulbasaur()"
-                class="skills__btn psychic"
-              ></button>
-              <button
-                onclick="mewtwo9thAttacktoCharmander()"
-                class="skills__btn psychic"
-              ></button>
+              <span>pikachu</span>
+              <span>bulbasaur</span>
+              <span>charmander</span>
+              <button onclick="attackFunction(mewtwo, 0, pikachu, fistSound)" class="skills__btn fist-mewtwo"></button>
+              <button onclick="attackFunction(mewtwo, 0, bulbasaur, fistSound)" class="skills__btn fist-mewtwo"></button>
+              <button onclick="attackFunction(mewtwo, 0, charmander, fistSound)" class="skills__btn fist-mewtwo"></button>
+              <button onclick="attackFunction(mewtwo, 1, pikachu, shadowBallSound)"
+                class="skills__btn shadow-ball"></button>
+              <button onclick="attackFunction(mewtwo, 1, bulbasaur, shadowBallSound)"
+                class="skills__btn shadow-ball"></button>
+              <button onclick="attackFunction(mewtwo, 1, charmander, shadowBallSound)"
+                class="skills__btn shadow-ball"></button>
+              <button onclick="attackFunction(mewtwo, 2, pikachu, psychicSound)" class="skills__btn psychic"></button>
+              <button onclick="attackFunction(mewtwo, 2, bulbasaur, psychicSound)" class="skills__btn psychic"></button>
+              <button onclick="attackFunction(mewtwo, 2, charmander, psychicSound)" class="skills__btn psychic"></button>
             </div>
           </div>
         </div>
       </div>
+
       <div id="reset">
         <button><a href="./index.html"></a></button>
       </div>
     </main>
-    <script src="./index.js"></script>
   </body>
 </html>
